@@ -157,13 +157,59 @@
 // }
 // Console.WriteLine($"We have {sum} items in the inventory.");
 
-string[] orderIDs = ["B123", "C234", "A345", "C15", "B177", "G3003", "C235", "B179"];
-string[] orderStartingWithB;
+// string[] orderIDs = ["B123", "C234", "A345", "C15", "B177", "G3003", "C235", "B179"];
+// string[] orderStartingWithB;
 
-foreach (string oder in orderIDs)
+// foreach (string oder in orderIDs)
+// {
+//     if (oder.StartsWith("B"))
+//     {
+//         Console.WriteLine(oder);
+//     }
+// }
+
+//---Create Readable Code with Conventions, whitespace and comments ---
+//1. Variable name conventions
+//a. camel case e.g. thisIsCamelCase;
+//b. names should be descriptive and meaningful e.g. 
+// You should choose a name for your variable that represents 
+// the kind of data it will hold (not the data type). 
+// bool orderComplete;, NOT bool isComplete;.
+//c. names should be one or more entire words appended together. 
+// Don't use contractions because the name of the variable may be unclear to others 
+// For example: decimal orderAmount;, NOT decimal odrAmt;.
+//d. names shouldn't include the data type of the variable
+// like string strMyValue;
+// Variable name examples:
+// char userOption;
+// int gameScore;
+// float particlesPerMillion;
+// bool processedCustomer;
+
+//Create and use code comments
+//Block comments
+/*
+string firstName = "Bob";
+int widgetsPurchased = 7;
+Console.WriteLine($"{firstName} purchased {widgetsPurchased} widgets.");
+*/
+
+Random random = new Random();
+string[] orderIDs = new string[5];
+// Loop through each blank orderID
+for (int i = 0; i < orderIDs.Length; i++)
 {
-    if (oder.StartsWith("B"))
-    {
-        Console.WriteLine(oder);
-    }
+    // Get a random value that equates to ASCII letters A through E
+    int prefixValue = random.Next(65, 70);
+    // Convert the random value into a char, then a string
+    string prefix = Convert.ToChar(prefixValue).ToString();
+    // Create a random number, pad with zeroes
+    string suffix = random.Next(1, 1000).ToString("000");
+    // Combine the prefix and suffix together, then assign to current OrderID
+    orderIDs[i] = prefix + suffix;
+}
+// Print out each orderID
+foreach (var orderID in orderIDs)
+{
+    Console.WriteLine(orderID);
 }
