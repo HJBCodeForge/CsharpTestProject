@@ -88,32 +88,53 @@
 // }
 
 //--Challenge: Improve renewal rate of subscriptions--
-Random random = new();
-int daysUntilExpiration = random.Next(12);
-int discountPercentage = 0;
+// Random random = new();
+// int daysUntilExpiration = random.Next(12);
+// int discountPercentage = 0;
 
-if (daysUntilExpiration == 1)
-{
-    discountPercentage = 20;
-}
-else if (daysUntilExpiration <= 5)
-{
-    discountPercentage = 10;
-}
+// if (daysUntilExpiration == 1)
+// {
+//     discountPercentage = 20;
+// }
+// else if (daysUntilExpiration <= 5)
+// {
+//     discountPercentage = 10;
+// }
 
-if (daysUntilExpiration == 0)
-{
-    Console.WriteLine("Your subscription has expired.");
-}
-else if (daysUntilExpiration == 1)
-    {
-        Console.WriteLine($"Your subscription expires within a day! \nRenew now and save {discountPercentage}%!");
-    }
-else if (daysUntilExpiration <= 5)
-{
-    Console.WriteLine($"Your subscription expires in {daysUntilExpiration} days. \nRenew now and save {discountPercentage}%!");
-}
-else if (daysUntilExpiration <= 10)
-{
-    Console.WriteLine("Your subscription will expire soon. Renew now!");
-}
+// if (daysUntilExpiration == 0)
+// {
+//     Console.WriteLine("Your subscription has expired.");
+// }
+// else if (daysUntilExpiration == 1)
+//     {
+//         Console.WriteLine($"Your subscription expires within a day! \nRenew now and save {discountPercentage}%!");
+//     }
+// else if (daysUntilExpiration <= 5)
+// {
+//     Console.WriteLine($"Your subscription expires in {daysUntilExpiration} days. \nRenew now and save {discountPercentage}%!");
+// }
+// else if (daysUntilExpiration <= 10)
+// {
+//     Console.WriteLine("Your subscription will expire soon. Renew now!");
+// }
+
+//---Arrays ---
+//Declaring the array
+string[] fraudulentOrderIds = new string[3];
+
+//Assigning Values
+fraudulentOrderIds[0] = "A123";
+fraudulentOrderIds[1] = "B456";
+fraudulentOrderIds[2] = "C789";
+
+//Out of bounds Index
+//fraudulentOrderIds[3] = "D000";
+
+//Retrieve values
+Console.WriteLine($"First: {fraudulentOrderIds[0]}");
+Console.WriteLine($"Second: {fraudulentOrderIds[1]}");
+Console.WriteLine($"Third: {fraudulentOrderIds[2]}");
+
+//Reassign values
+fraudulentOrderIds[0] = "F000";
+Console.WriteLine($"Reassign First: {fraudulentOrderIds[0]}");
