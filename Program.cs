@@ -141,3 +141,8 @@ Console.WriteLine($"Third: {fraudulentOrderIds[2]}");
 //Reassign values
 fraudulentOrderIds[0] = "F000";
 Console.WriteLine($"Reassign First: {fraudulentOrderIds[0]}");
+
+//Lenght Property
+
+
+Console.WriteLine($"There are {fraudulentOrderIds.Length} fraudulent orders to process.");
