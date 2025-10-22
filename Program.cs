@@ -120,15 +120,18 @@
 
 //---Arrays ---
 //Declaring the array
-string[] fraudulentOrderIds = new string[3];
+//string[] fraudulentOrderIds = new string[3];
 
 //Assigning Values
-fraudulentOrderIds[0] = "A123";
-fraudulentOrderIds[1] = "B456";
-fraudulentOrderIds[2] = "C789";
+// fraudulentOrderIds[0] = "A123";
+// fraudulentOrderIds[1] = "B456";
+// fraudulentOrderIds[2] = "C789";
 
 //Out of bounds Index
 //fraudulentOrderIds[3] = "D000";
+
+//Initialize an array
+string[] fraudulentOrderIds = ["A123", "B456", "C789"];
 
 //Retrieve values
 Console.WriteLine($"First: {fraudulentOrderIds[0]}");
