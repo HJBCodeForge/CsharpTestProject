@@ -131,18 +131,29 @@
 //fraudulentOrderIds[3] = "D000";
 
 //Initialize an array
-string[] fraudulentOrderIds = ["A123", "B456", "C789"];
+//string[] fraudulentOrderIds = ["A123", "B456", "C789"];
 
 //Retrieve values
-Console.WriteLine($"First: {fraudulentOrderIds[0]}");
-Console.WriteLine($"Second: {fraudulentOrderIds[1]}");
-Console.WriteLine($"Third: {fraudulentOrderIds[2]}");
+// Console.WriteLine($"First: {fraudulentOrderIds[0]}");
+// Console.WriteLine($"Second: {fraudulentOrderIds[1]}");
+// Console.WriteLine($"Third: {fraudulentOrderIds[2]}");
 
 //Reassign values
-fraudulentOrderIds[0] = "F000";
-Console.WriteLine($"Reassign First: {fraudulentOrderIds[0]}");
+// fraudulentOrderIds[0] = "F000";
+// Console.WriteLine($"Reassign First: {fraudulentOrderIds[0]}");
 
 //Lenght Property
+// Console.WriteLine($"There are {fraudulentOrderIds.Length} fraudulent orders to process.");
 
+//--foreach in arrays--
+int[] inventory = [200, 450, 700, 175, 250];
+int sum = 0;
+int bin = 0;
+foreach (int items in inventory)
+{
+    sum += items;
+    bin++;
+    Console.WriteLine($"Bin {bin} = {items} items (Running total: {sum})");
+}
+Console.WriteLine($"We have {sum} items in the inventory.");
 
-Console.WriteLine($"There are {fraudulentOrderIds.Length} fraudulent orders to process.");
